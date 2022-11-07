@@ -1,5 +1,6 @@
 package com.rebecca.walmartapp2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val uemail: TextView = findViewById(R.id.uemailTV)
         uemail.setText("userEmail@email.com")
 
+
         val cat1: ImageView = findViewById(R.id.tv)
         cat1.setOnClickListener(this)
         val cat2: ImageView = findViewById(R.id.jack)
@@ -25,17 +27,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
+        val intent : Intent = Intent(this,ProductLlist::class.java)
         when (v?.id) {
             R.id.tv -> {
+                startActivity(intent)
                 Toast.makeText(this, "Electronics", Toast.LENGTH_LONG).show()
             }
             R.id.jack -> {
+                startActivity(intent)
                 Toast.makeText(this, "Clothing.", Toast.LENGTH_LONG).show()
             }
             R.id.lip -> {
+                startActivity(intent)
                 Toast.makeText(this, "Beauty", Toast.LENGTH_LONG).show()
             }
             R.id.food -> {
+                startActivity(intent)
                 Toast.makeText(this, "Food", Toast.LENGTH_LONG).show()
             }
         }
