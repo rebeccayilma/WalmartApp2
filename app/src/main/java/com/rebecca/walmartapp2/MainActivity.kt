@@ -12,9 +12,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val uemail: TextView = findViewById(R.id.uemailTV)
-        val intent = getIntent()
-        val userEmail = intent.getStringExtra("uemail")
-        uemail.setText(userEmail)
+        uemail.setText("userEmail@email.com")
 
         val cat1: ImageView = findViewById(R.id.tv)
         cat1.setOnClickListener(this)
